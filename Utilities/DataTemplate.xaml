@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:Calendar.ViewModel"
+                    xmlns:view="clr-namespace:Calendar.View">
+
+    <DataTemplate DataType="{x:Type vm:HomeVM}">
+        <view:Home />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:CalendarVM}">
+        <view:Calendar />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:MyTaskVM}">
+        <view:My_task/>
+    </DataTemplate>
+
+</ResourceDictionary>
