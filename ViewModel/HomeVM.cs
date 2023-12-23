@@ -5,11 +5,17 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Calendar.Utilities;
+using Calendar.Model;
 
 namespace Calendar.ViewModel
 {
-    class HomeVM
+    class HomeVM : Utilities.ViewModelBase
     {
+        private readonly PageModel _pageModel;
+
+        public HomeVM()
+        {
+            _pageModel = new PageModel();
+        }
     }
 }

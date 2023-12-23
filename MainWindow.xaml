@@ -29,7 +29,7 @@
 
             <!--// Navigation Panel //-->
             <Grid Grid.Column="0">
-                <Border Background="#F6F4EB"/>
+                <Border Background="#E0F4FF"/>
                 <DockPanel>
                     
                     <!--// Image //-->
@@ -133,7 +133,7 @@
 
                     <Separator Background="#749BC2"></Separator>
                     <!--// Add //-->
-                    <Button Style="{StaticResource AddButton}"
+                    <Menu:AddBtn Style="{StaticResource Add_BtnStyle}"
                             VerticalAlignment="Bottom" 
                             DockPanel.Dock="Bottom" 
                             Margin="0 0 0 50">
@@ -146,7 +146,7 @@
                         
                         
                         
-                    </Button>
+                    </Menu:AddBtn>
                     
                     
                     

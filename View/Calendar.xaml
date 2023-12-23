@@ -3,10 +3,186 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Calendar.View"
+             xmlns:vm="clr-namespace:Calendar.ViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             
+             Style="{StaticResource Page_Style}"
+             d:DesignHeight="750" 
+             d:DesignWidth="940">
+    
+    
+    
     <Grid>
+        <Border Background="#39A7FF"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             
+            <!--// Option //-->
+            <Grid Grid.Row="0">
+                <Border Background="#E0F4FF"
+                        Margin="10"
+                        BorderThickness="1"
+                        CornerRadius="10">
+
+                    <DockPanel>
+                        
+                        <!--// TimePicker //-->
+                        
+                        <!--LeftAngler-->
+                        <Button Style="{StaticResource Angler_BtnStyle}"
+                                DockPanel.Dock="Left"
+                                HorizontalAlignment="Left"
+                                Margin="50,10,10,10">
+                            <Image Source="/Images/angle-left.png"
+                                   Style="{StaticResource ContentImage_Style}"/>
+
+                        </Button>
+                        
+                        <!--DateTime-->
+                        <DatePicker FontFamily="/Fonts/Dosis-Medium.tff"
+                                    FontSize="24"
+                                    DockPanel.Dock="Left"
+                                    Width="300"
+                                    HorizontalAlignment="Left"
+                                    Margin="20,10,20,10" Foreground="Black" 
+                                    Background="{x:Null}" 
+                                    BorderBrush="{x:Null}"
+                                    SelectedDateFormat="Long"
+                                    />
+                        
+                        <!--RightAngler-->
+                        <Button Style="{StaticResource Angler_BtnStyle}"
+                                DockPanel.Dock="Left"
+                                HorizontalAlignment="Left"
+                                Margin="10">
+                            <Image Source="/Images/angle-right.png"
+                                Style="{StaticResource ContentImage_Style}"/>
+
+                        </Button>
+                        
+                        <!--TodaySelect-->
+                        <Button Style="{StaticResource Today_BtnStayle}"
+                                DockPanel.Dock="Right"
+                                HorizontalAlignment="Right"
+                                Margin="20,10,70,10"
+                                >
+                            <TextBlock Style="{StaticResource Content_Text_Style}"
+                                       Text="Today"/>
+                        </Button>                        
+
+                    </DockPanel>
+                    
+                    
+                </Border>      
+            </Grid>
+            
+            <!--// CalendarShow //-->
+            <Grid Grid.Row="1">
+                <Border Background="#66000000"
+                        Margin="10"
+                        BorderThickness="1"
+                        CornerRadius="10"/>
+                
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--Day-->
+
+                    <Grid Grid.Row="0">
+                        <Border Margin="10,10,10,10"
+                                Background="Transparent"
+                                BorderThickness="1"
+                                BorderBrush="{x:Null}"
+                                CornerRadius="10,10,1,1">
+
+                            <!--DayOfWeek-->
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="Sun"
+                                            Grid.Column="0"
+                                            Style="{StaticResource Day_Text_Style}"/>
+                                <TextBlock Text="Mon"
+                                            Grid.Column="1"
+                                            Style="{StaticResource Day_Text_Style}"/>
+                                <TextBlock Text="Tue"
+                                            Grid.Column="2"
+                                            Style="{StaticResource Day_Text_Style}"/>
+                                <TextBlock Text="Wen"
+                                            Grid.Column="3"
+                                            Style="{StaticResource Day_Text_Style}"/>
+                                <TextBlock Text="Thur"
+                                            Grid.Column="4"
+                                            Style="{StaticResource Day_Text_Style}"/>
+                                <TextBlock Text="Fri"
+                                            Grid.Column="5"
+                                            Style="{StaticResource Day_Text_Style}"/>
+                                <TextBlock Text="Sat"
+                                            Grid.Column="6"
+                                            Style="{StaticResource Day_Text_Style}"/>
+
+                            </Grid>
+
+
+
+                        </Border>
+
+
+
+                    </Grid>
+                    
+                    <!--DayOfDay-->
+                    <Grid Grid.Row="1">
+                        <Border Margin="10,0,10,10"
+                                Background="Transparent"
+                                BorderThickness="1"
+                                BorderBrush="{x:Null}"
+                                CornerRadius="1,1,10,10">
+                            
+                            
+                            
+                            
+                            
+                        </Border>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </Grid>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                 </Grid>
+               
+
+
+
+            </Grid>
+            
+        </Grid>
+
     </Grid>
 </UserControl>

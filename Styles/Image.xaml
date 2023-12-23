@@ -1,6 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <!--Navigation-->
+    
     <Style x:Key="Image_Style" TargetType="Image">
 
         <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -9,9 +11,19 @@
         <Setter Property="Height" Value="25"/>
         <Setter Property="Width" Value="25"/>
         <Setter Property="Margin" Value="10"/>
-
-
     </Style>
+
+    <!--Content-->
     
-    
+    <Style x:Key="ContentImage_Style" TargetType="Image">
+
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Margin" Value="0"/>
+    </Style>
+
+
 </ResourceDictionary>
