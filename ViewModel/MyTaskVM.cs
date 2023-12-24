@@ -10,7 +10,7 @@ namespace Calendar.ViewModel
     class MyTaskVM : Utilities.ViewModelBase
     {
         private readonly PageModel _pageModel;
-
+        
         public MyTaskVM()
         {
             _pageModel = new PageModel();

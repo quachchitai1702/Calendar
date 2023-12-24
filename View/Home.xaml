@@ -23,7 +23,7 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <Grid>
+            <Grid>                
 
                 <TextBlock Text="Welcome!" 
                            FontFamily="/Fonts/Dosis-Regular"
@@ -31,7 +31,7 @@
                            Margin="50,50,488,50"
                            Foreground="#FFEED9" Grid.ColumnSpan="3"  
                            />
-
+                
 
 
 

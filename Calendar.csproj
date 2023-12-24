@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="CalendarApp.ico" />
     <None Remove="CalendarApp.png" />
+    <None Remove="close.png" />
     <None Remove="Images\add.png" />
     <None Remove="Images\addition.png" />
     <None Remove="Images\angle-left.png" />
@@ -28,6 +29,7 @@
   <ItemGroup>
     <Resource Include="CalendarApp.ico" />
     <Resource Include="CalendarApp.png" />
+    <Resource Include="close.png" />
     <Resource Include="Images\add.png" />
     <Resource Include="Images\addition.png" />
     <Resource Include="Images\angle-left.png" />

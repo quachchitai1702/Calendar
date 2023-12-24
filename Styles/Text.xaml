@@ -15,7 +15,7 @@
 
     </Style>
 
-    <!--// Notify text //-->
+    <!--// Add text //-->
 
     <Style x:Key="Add_Text_Style"
        TargetType="TextBlock">
@@ -50,7 +50,7 @@
         <Setter Property="Width" Value="57"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
     </Style>
-
+    
     <!--// Content text //-->
     <Style x:Key="Content_Text_Style"
        TargetType="TextBlock">
@@ -61,37 +61,35 @@
         <Setter Property="Foreground" Value="#000"/>
         <Setter Property="FontSize" Value="24"/>
         <Setter Property="Margin" Value="0"/>
-
+        
     </Style>
 
-    <!--// Day text //-->
-     <Style x:Key="Day_Text_Style"
-         TargetType="TextBlock">
+    <!--// Content text //-->
+    <Style x:Key="Day_Text_Style"
+   TargetType="TextBlock">
 
-            <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="#FFFF"/>
-            <Setter Property="FontSize" Value="24"/>
-            <Setter Property="Margin" Value="0"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#FFFF"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Margin" Value="0"/>
 
-     </Style>
+    </Style>
 
     <!--// Task text //-->
     <Style x:Key="Task_Text_Style"
-           TargetType="TextBox">
+TargetType="TextBox">
 
-         <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium"/>
-         <Setter Property="VerticalAlignment" Value="Stretch"/>
-         <Setter Property="HorizontalAlignment" Value="Stretch"/>
-         <Setter Property="Foreground" Value="#FFFF"/>
-         <Setter Property="FontSize" Value="24"/>
-         <Setter Property="BorderBrush" Value="{x:Null}"/>
-         <Setter Property="Margin" Value="1,10,1,10"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Foreground" Value="#FFFF"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Margin" Value="1,10,1,10"/>
 
     </Style>
-        
+
+
 </ResourceDictionary>
-
-
-
