@@ -18,7 +18,7 @@
                             BorderThickness="0">
                         <Border.Background>
                             <SolidColorBrush x:Name="BorderBackground"
-                                             Color="#E0F4FF"/>
+                                             Color="#F6F4EB "/>
                         </Border.Background>
                         <Grid>
                             <Border x:Name="Indicator"
@@ -26,7 +26,7 @@
                                     Width="4"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Center"
-                                    Background="#E0F4FF"
+                                    Background="#F6F4EB"
                                     Visibility="Collapsed"/>
                             <ContentPresenter/>
                         </Grid>
@@ -43,8 +43,8 @@
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
                                                     Storyboard.TargetProperty="Color"
-                                                    From="#E0F4FF"
-                                                    To="#87C4FF"
+                                                    From="#F6F4EB"
+                                                    To="#4CB9E7"
                                                     Duration="0:0:0.3"/>
                                 </Storyboard>
                             </BeginStoryboard>
@@ -55,8 +55,8 @@
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
                                                     Storyboard.TargetProperty="Color"
-                                                    From="#87C4FF"
-                                                    To="#E0F4FF"
+                                                    From="#4CB9E7"
+                                                    To="#F6F4EB"
                                                     Duration="0:0:0.3"/>
                                 </Storyboard>
                             </BeginStoryboard>
@@ -68,7 +68,7 @@
                                  Value="True">
                             <Setter Property="Background"
                                     TargetName="border"
-                                    Value="#39A7FF"/>
+                                    Value="#749BC2"/>
                             <Setter Property="Visibility"
                                     TargetName="Indicator"
                                     Value="Visible"/>
@@ -80,10 +80,10 @@
     </Style>
     
     <!--Navigation Add Button-->
-    <Style x:Key="Add_BtnStyle" 
+    <Style x:Key="AddButton" 
            TargetType="Button">
 
-        <Setter Property="Background" Value="#39A7FF"/>
+        <Setter Property="Background" Value="#4682A9"/>
         <Setter Property="Foreground" Value="#000"/>
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="Width" Value="180"/>
@@ -104,12 +104,12 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#87C4FF"/>
+                <Setter Property="Background" Value="#91C8E4"/>
                 <Setter Property="Foreground" Value="#000"/>
             </Trigger>
         </Style.Triggers>
     </Style>
-    
+
     <!--AnglerButton-->
     <Style x:Key="Angler_BtnStyle" 
            TargetType="Button">
@@ -141,7 +141,7 @@
     <!--TodayButton-->
     <Style x:Key="Today_BtnStayle" 
            TargetType="Button">
-        
+
         <Setter Property="Background" Value="#FFFFFF"/>
         <Setter Property="Foreground" Value="#000"/>
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
@@ -168,7 +168,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    
+
     <!--DeleteButton-->
     <Style x:Key="Delete_BtnStyle" 
            TargetType="Button">

@@ -5,13 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vm="clr-namespace:Calendar.ViewModel"
              mc:Ignorable="d" 
-             
+            
              Style="{StaticResource Page_Style}"
              d:DesignHeight="750" 
              d:DesignWidth="940">
-    
-    
-    
+
+
+
     <Grid>
         <Border Background="#39A7FF"/>
 
@@ -20,7 +20,7 @@
                 <RowDefinition Height="80"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+
             <!--// Option //-->
             <Grid Grid.Row="0">
                 <Border Background="#E0F4FF"
@@ -29,9 +29,9 @@
                         CornerRadius="10">
 
                     <DockPanel>
-                        
+
                         <!--// TimePicker //-->
-                        
+
                         <!--LeftAngler-->
                         <Button Style="{StaticResource Angler_BtnStyle}"
                                 DockPanel.Dock="Left"
@@ -41,7 +41,7 @@
                                    Style="{StaticResource ContentImage_Style}"/>
 
                         </Button>
-                        
+
                         <!--DateTime-->
                         <DatePicker FontFamily="/Fonts/Dosis-Medium.tff"
                                     FontSize="24"
@@ -53,7 +53,7 @@
                                     BorderBrush="{x:Null}"
                                     SelectedDateFormat="Long"
                                     />
-                        
+
                         <!--RightAngler-->
                         <Button Style="{StaticResource Angler_BtnStyle}"
                                 DockPanel.Dock="Left"
@@ -63,31 +63,31 @@
                                 Style="{StaticResource ContentImage_Style}"/>
 
                         </Button>
-                        
+
                         <!--TodaySelect-->
                         <Button Style="{StaticResource Today_BtnStayle}"
                                 DockPanel.Dock="Right"
                                 HorizontalAlignment="Right"
                                 Margin="20,10,70,10"
                                 >
-                            <TextBlock Style="{StaticResource Content_Text_Style}"
+                            <TextBlock Style="{StaticResource Content_Text_Style }"
                                        Text="Today"/>
-                        </Button>                        
+                        </Button>
 
                     </DockPanel>
-                    
-                    
-                </Border>      
+
+
+                </Border>
             </Grid>
-            
+
             <!--// CalendarShow //-->
             <Grid Grid.Row="1">
                 <Border Background="#66000000"
                         Margin="10"
                         BorderThickness="1"
                         CornerRadius="10"/>
-                
-                
+
+
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="80"/>
@@ -147,7 +147,7 @@
 
 
                     </Grid>
-                    
+
                     <!--DayOfDay-->
                     <Grid Grid.Row="1">
                         <Border Margin="10,0,10,10"
@@ -155,33 +155,33 @@
                                 BorderThickness="1"
                                 BorderBrush="{x:Null}"
                                 CornerRadius="1,1,10,10">
-                            
-                            
-                            
-                            
-                            
+
+
+
+
+
                         </Border>
-                        
-                        
-                        
-                        
-                        
-                        
+
+
+
+
+
+
                     </Grid>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                 </Grid>
-               
+
+
+
+
+
+
+
+                </Grid>
+
 
 
 
             </Grid>
-            
+
         </Grid>
 
     </Grid>

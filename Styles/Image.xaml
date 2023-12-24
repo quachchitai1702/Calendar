@@ -2,8 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!--Navigation-->
-    
-    <Style x:Key="Image_Style" TargetType="Image">
+    <Style x:Key="Image_Style" 
+           TargetType="Image">
 
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -11,11 +11,14 @@
         <Setter Property="Height" Value="25"/>
         <Setter Property="Width" Value="25"/>
         <Setter Property="Margin" Value="10"/>
-    </Style>
 
-    <!--Content-->
+
+    </Style>
     
-    <Style x:Key="ContentImage_Style" TargetType="Image">
+    <!--Content-->
+
+    <Style x:Key="ContentImage_Style" 
+           TargetType="Image">
 
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
