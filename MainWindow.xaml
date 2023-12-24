@@ -132,35 +132,25 @@
                     </StackPanel>
 
                     <Separator Background="#749BC2"></Separator>
+                    
                     <!--// Add //-->
                     <Menu:AddBtn Style="{StaticResource Add_BtnStyle}"
                             VerticalAlignment="Bottom" 
                             DockPanel.Dock="Bottom" 
                             Margin="0 0 0 50">
                         <StackPanel Orientation="Horizontal">
+
                             <Image Source="/Images/addition.png"
                                     Style="{StaticResource Image_Style}"/>
+
                             <TextBlock Text="Add task"
-                                        Style="{StaticResource Add_Text_Style}"/>
+                                    Style="{StaticResource Add_Text_Style}"/>
                         </StackPanel>
-                        
-                        
-                        
                     </Menu:AddBtn>
-                    
-                    
-                    
-                    
+
                 </DockPanel>
 
-            </Grid>
-            
-            
-            
-            
-            
-            
-            
+            </Grid>        
             
             
         </Grid>
