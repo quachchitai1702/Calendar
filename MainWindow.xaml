@@ -17,7 +17,8 @@
     <Window.DataContext>
         <vm:NavigationVM/>
     </Window.DataContext>
-        
+
+  
 
     <Grid>
         <Grid>
@@ -29,7 +30,7 @@
 
             <!--// Navigation Panel //-->
             <Grid Grid.Column="0">
-                <Border Background="#E0F4FF"/>
+                <Border Background="#FFF"/>
                 <DockPanel>
                     
                     <!--// Image //-->
@@ -134,7 +135,7 @@
                     <Separator Background="#749BC2"></Separator>
                     
                     <!--// Add //-->
-                    <Menu:AddBtn Style="{StaticResource Add_BtnStyle}"
+                    <Button Style="{StaticResource Add_BtnStyle}"
                             VerticalAlignment="Bottom" 
                             DockPanel.Dock="Bottom" 
                             Margin="0 0 0 50">
@@ -146,13 +147,22 @@
                             <TextBlock Text="Add task"
                                     Style="{StaticResource Add_Text_Style}"/>
                         </StackPanel>
-                    </Menu:AddBtn>
+                    </Button>
 
                 </DockPanel>
 
-            </Grid>        
-            
-            
+            </Grid>
+
+            <!--// ContentPages //-->
+            <Grid Grid.Column="1">
+                <ContentControl x:Name="Pages"
+                                Content="{Binding CurrentView}"/>
+
+
+
+
+            </Grid>
+
         </Grid>
 
     </Grid>

@@ -6,7 +6,7 @@
     <Style x:Key="Navigation_Text_Style"
            TargetType="TextBlock">
 
-        <Setter Property="FontFamily" Value="/Fonts/Dosis-Bold"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Bold.ttf"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="Foreground" Value="#000"/>
@@ -19,7 +19,7 @@
 
     <Style x:Key="Add_Text_Style"
        TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="/Fonts/Dosis-Bold"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Bold.ttf"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="#000"/>
@@ -31,7 +31,7 @@
 
     <Style x:Key="Notify_Text_Style"
            TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="/Fonts/Dosis-Bold"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Bold.ttf"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="Foreground" Value="#000"/>
@@ -41,7 +41,7 @@
     
     <!--// Interger text //-->
     <Style x:Key="IntTextBoxStyle" TargetType="TextBox">
-        <Setter Property="FontFamily" Value="/Fonts/Dosis-Bold"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Bold.ttf"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="Foreground" Value="#000"/>
@@ -55,7 +55,7 @@
     <Style x:Key="Content_Text_Style"
        TargetType="TextBlock">
 
-        <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium.ttf"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="#000"/>
@@ -64,14 +64,14 @@
         
     </Style>
 
-    <!--// Content text //-->
+    <!--// Day text //-->
     <Style x:Key="Day_Text_Style"
    TargetType="TextBlock">
 
-        <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium.ttf"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Foreground" Value="#FFFF"/>
+        <Setter Property="Foreground" Value="#000"/>
         <Setter Property="FontSize" Value="24"/>
         <Setter Property="Margin" Value="0"/>
 
@@ -81,10 +81,10 @@
     <Style x:Key="Task_Text_Style"
 TargetType="TextBox">
 
-        <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium.ttf"/>
         <Setter Property="VerticalAlignment" Value="Stretch"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        <Setter Property="Foreground" Value="#FFFF"/>
+        <Setter Property="Foreground" Value="#FFF"/>
         <Setter Property="FontSize" Value="24"/>
         <Setter Property="BorderBrush" Value="{x:Null}"/>
         <Setter Property="Margin" Value="1,10,1,10"/>

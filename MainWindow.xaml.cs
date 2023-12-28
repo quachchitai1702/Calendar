@@ -24,18 +24,7 @@ namespace Calendar
             InitializeComponent();
 
         }
-        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            if (!IsNumeric(e.Text))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private bool IsNumeric(string text)
-        {
-            return int.TryParse(text, out _);
-        }
+        
 
 
     }

@@ -15,12 +15,13 @@
 
     <Grid>
 
-        <Border Background="#39A7FF"/>
+        <Border Background="#9747FF"
+                />
 
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="300"/>
-                <RowDefinition />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
             <Grid>                
@@ -29,7 +30,7 @@
                            FontFamily="/Fonts/Dosis-Regular"
                            FontSize="70"
                            Margin="50,50,488,50"
-                           Foreground="#FFEED9" Grid.ColumnSpan="3"  
+                           Foreground="#FFF" Grid.ColumnSpan="3"  
                            />
                 
 

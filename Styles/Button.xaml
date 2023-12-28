@@ -1,5 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+   
+
 
     <!--Navigation Button-->
     <Style x:Key="Navigation_BtnStyle"
@@ -18,7 +20,7 @@
                             BorderThickness="0">
                         <Border.Background>
                             <SolidColorBrush x:Name="BorderBackground"
-                                             Color="#E0F4FF"/>
+                                             Color="#FFF"/>
                         </Border.Background>
                         <Grid>
                             <Border x:Name="Indicator"
@@ -26,7 +28,7 @@
                                     Width="4"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Center"
-                                    Background="#E0F4FF"
+                                    Background="#FFF"
                                     Visibility="Collapsed"/>
                             <ContentPresenter/>
                         </Grid>
@@ -43,8 +45,8 @@
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
                                                     Storyboard.TargetProperty="Color"
-                                                    From="#E0F4FF"
-                                                    To="#87C4FF"
+                                                    From="#FFF"
+                                                    To="#EADAFF"
                                                     Duration="0:0:0.3"/>
                                 </Storyboard>
                             </BeginStoryboard>
@@ -55,8 +57,8 @@
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
                                                     Storyboard.TargetProperty="Color"
-                                                    From="#87C4FF"
-                                                    To="#E0F4FF"
+                                                    From="#EADAFF"
+                                                    To="#FFF"
                                                     Duration="0:0:0.3"/>
                                 </Storyboard>
                             </BeginStoryboard>
@@ -68,7 +70,7 @@
                                  Value="True">
                             <Setter Property="Background"
                                     TargetName="border"
-                                    Value="#39A7FF"/>
+                                    Value="#E5D1FF"/>
                             <Setter Property="Visibility"
                                     TargetName="Indicator"
                                     Value="Visible"/>
@@ -83,7 +85,7 @@
     <Style x:Key="Add_BtnStyle" 
            TargetType="Button">
 
-        <Setter Property="Background" Value="#39A7FF"/>
+        <Setter Property="Background" Value="#9747FF"/>
         <Setter Property="Foreground" Value="#000"/>
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="Width" Value="180"/>
@@ -104,8 +106,8 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#87C4FF"/>
-                <Setter Property="Foreground" Value="#000"/>
+                <Setter Property="Background" Value="#DABEFF"/>
+                <Setter Property="Foreground" Value="#7F7F7F"/>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -114,14 +116,14 @@
     <Style x:Key="Angler_BtnStyle" 
            TargetType="Button">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="#333333"/>
+        <Setter Property="Foreground" Value="#000"/>
         <Setter Property="Width" Value="25"/>
         <Setter Property="Height" Value="25"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border BorderThickness="0.5" CornerRadius="5" BorderBrush="#333333">
+                    <Border BorderThickness="0.5" CornerRadius="5" BorderBrush="#000">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
@@ -130,7 +132,7 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="#717171"/>
+                <Setter Property="Foreground" Value="#7F7F7F"/>
             </Trigger>
             <Trigger Property="IsMouseCaptured"  Value="True">
                 <Setter Property="Foreground" Value="#333333"/>
@@ -174,7 +176,7 @@
            TargetType="Button">
         
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="#333333"/>
+        <Setter Property="Foreground" Value="#000"/>
         <Setter Property="Width" Value="25"/>
         <Setter Property="Height" Value="25"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -184,6 +186,36 @@
                     <Border BorderBrush="{x:Null}">
                         <ContentPresenter HorizontalAlignment="Center" 
                                           VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="#717171"/>
+            </Trigger>
+            <Trigger Property="IsMouseCaptured"  Value="True">
+                <Setter Property="Foreground" Value="#333333"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--EditButton-->
+    <Style x:Key="Edit_BtnStyle" 
+        TargetType="Button">
+
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#000"/>
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderBrush="{x:Null}">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -235,20 +267,22 @@
            TargetType="Button">
         
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="#333333"/>
+        <Setter Property="Foreground" Value="#000"/>
         <Setter Property="Width" Value="25"/>
         <Setter Property="Height" Value="25"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border BorderThickness="2.5" CornerRadius="5" BorderBrush="#333333">
+                    <Border BorderThickness="2.5" CornerRadius="5" BorderBrush="#000">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
 
+        
+        
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Foreground" Value="#717171"/>
@@ -256,8 +290,52 @@
             <Trigger Property="IsMouseCaptured"  Value="True">
                 <Setter Property="Foreground" Value="#333333"/>
             </Trigger>
+
+
+          
         </Style.Triggers>
     </Style>
+
+    
+
+    <!--EarchDayButton-->
+    <Style x:Key="earch_DayButton" TargetType="Button">
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="FontFamily" Value="/Fonts/Dosis-Medium.ttf"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="Foreground" Value="#000000"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="White"/>
+
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderThickness="1" CornerRadius="30" >
+                        <Grid>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFDBFF" />
+                            <Setter Property="Foreground" Value="#000000"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FFC5FF"/>
+                            <Setter Property="Foreground" Value="#000000"/>
+                        </Trigger>
+                        
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+
+    </Style>
+
 
 
 

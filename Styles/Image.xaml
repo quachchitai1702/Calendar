@@ -17,6 +17,7 @@
     
     <Style x:Key="ContentImage_Style" TargetType="Image">
 
+        
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Stretch" Value="Uniform"/>

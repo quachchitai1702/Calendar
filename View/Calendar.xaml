@@ -3,24 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:vm="clr-namespace:Calendar.ViewModel"
+             xmlns:vm="clr-namespace:Calendar.ViewModel" 
+             
+             
              mc:Ignorable="d" 
              
              Style="{StaticResource Page_Style}"
              d:DesignHeight="750" 
              d:DesignWidth="940">
-    
-    
-    
+
+
+
+
+
+
+
     <Grid>
-        <Border Background="#39A7FF"/>
+        <Border Background="#9747FF"/>
 
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"/>
                 <RowDefinition/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            
+
             <!--// Option //-->
             <Grid Grid.Row="0">
                 <Border Background="#E0F4FF"
@@ -29,159 +36,143 @@
                         CornerRadius="10">
 
                     <DockPanel>
-                        
+
                         <!--// TimePicker //-->
-                        
+
                         <!--LeftAngler-->
-                        <Button Style="{StaticResource Angler_BtnStyle}"
-                                DockPanel.Dock="Left"
-                                HorizontalAlignment="Left"
-                                Margin="50,10,10,10">
-                            <Image Source="/Images/angle-left.png"
-                                   Style="{StaticResource ContentImage_Style}"/>
+                        <Button 
+                            x:Name="pre_Month_Btn"
+                            Style="{StaticResource Angler_BtnStyle}"                    
+                            DockPanel.Dock="Left"                                
+                            HorizontalAlignment="Left"                                
+                            Margin="50,10,10,10" Click="pre_Month_Btn_Click">
+                            <Image Source="/Images/angle-left.png"                                   
+                                Style="{StaticResource ContentImage_Style}"/>
 
                         </Button>
-                        
+
                         <!--DateTime-->
-                        <DatePicker FontFamily="/Fonts/Dosis-Medium.tff"
-                                    FontSize="24"
-                                    DockPanel.Dock="Left"
-                                    Width="300"
-                                    HorizontalAlignment="Left"
-                                    Margin="20,10,20,10" Foreground="Black" 
-                                    Background="{x:Null}" 
-                                    BorderBrush="{x:Null}"
-                                    SelectedDateFormat="Long"
-                                    />
-                        
+                        <DatePicker
+                            x:Name="datePicker"
+                            FontFamily="/Fonts/Dosis-Medium.ttf"
+                            FontSize="24"
+                            DockPanel.Dock="Left"
+                            Width="300"
+                            HorizontalAlignment="Left"
+                            Margin="10,10,10,10"
+                            Foreground="Black"                           
+                            Background="{x:Null}"
+                            BorderBrush="{x:Null}"
+                            SelectedDateFormat="Short" 
+                            FirstDayOfWeek="Monday"
+                            SelectedDateChanged="datePicker_SelectedDateChanged"
+                            />
+
+
                         <!--RightAngler-->
-                        <Button Style="{StaticResource Angler_BtnStyle}"
-                                DockPanel.Dock="Left"
-                                HorizontalAlignment="Left"
-                                Margin="10">
+                        <Button 
+                            x:Name="next_Month_Btn"
+                            Style="{StaticResource Angler_BtnStyle}"                                
+                            DockPanel.Dock="Left"                                
+                            HorizontalAlignment="Left"                                
+                            Margin="10" Click="next_Month_Btn_Click">
                             <Image Source="/Images/angle-right.png"
                                 Style="{StaticResource ContentImage_Style}"/>
 
                         </Button>
-                        
+
                         <!--TodaySelect-->
-                        <Button Style="{StaticResource Today_BtnStayle}"
-                                DockPanel.Dock="Right"
-                                HorizontalAlignment="Right"
-                                Margin="20,10,70,10"
+                        <Button 
+                            x:Name="todaySet_Calendar_btn"
+                            Style="{StaticResource Today_BtnStayle}"                                
+                            DockPanel.Dock="Right"                                
+                            HorizontalAlignment="Right"                                
+                            Margin="20,10,70,10" Click="todaySet_Calendar_btn_Click"
                                 >
                             <TextBlock Style="{StaticResource Content_Text_Style}"
                                        Text="Today"/>
-                        </Button>                        
+                        </Button>
 
                     </DockPanel>
-                    
-                    
-                </Border>      
+
+
+                </Border>
             </Grid>
-            
+
             <!--// CalendarShow //-->
             <Grid Grid.Row="1">
                 <Border Background="#66000000"
                         Margin="10"
                         BorderThickness="1"
                         CornerRadius="10"/>
-                
-                
+
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="80"/>
                         <RowDefinition/>
+                        <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
 
-                    <!--Day-->
-
+                    <!-- DayOfWeek -->
                     <Grid Grid.Row="0">
-                        <Border Margin="10,10,10,10"
-                                Background="Transparent"
-                                BorderThickness="1"
-                                BorderBrush="{x:Null}"
-                                CornerRadius="10,10,1,1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
 
-                            <!--DayOfWeek-->
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
+                        <TextBlock Text="Mon" Grid.Column="0" Style="{StaticResource Day_Text_Style}"/>
+                        <TextBlock Text="Tue" Grid.Column="1" Style="{StaticResource Day_Text_Style}"/>
+                        <TextBlock Text="Wen" Grid.Column="2" Style="{StaticResource Day_Text_Style}"/>
+                        <TextBlock Text="Thu" Grid.Column="3" Style="{StaticResource Day_Text_Style}"/>
+                        <TextBlock Text="Fri" Grid.Column="4" Style="{StaticResource Day_Text_Style}"/>
+                        <TextBlock Text="Sat" Grid.Column="5" Style="{StaticResource Day_Text_Style}"/>
+                        <TextBlock Text="Sun" Grid.Column="6" Style="{StaticResource Day_Text_Style}"/>
+                    </Grid>
 
-                                </Grid.ColumnDefinitions>
+                    <!-- DaysOfMonth using a matrix -->
+                    <Grid Grid.Row="1" 
+                          x:Name="gridMatrix">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"/>
 
-                                <TextBlock Text="Sun"
-                                            Grid.Column="0"
-                                            Style="{StaticResource Day_Text_Style}"/>
-                                <TextBlock Text="Mon"
-                                            Grid.Column="1"
-                                            Style="{StaticResource Day_Text_Style}"/>
-                                <TextBlock Text="Tue"
-                                            Grid.Column="2"
-                                            Style="{StaticResource Day_Text_Style}"/>
-                                <TextBlock Text="Wen"
-                                            Grid.Column="3"
-                                            Style="{StaticResource Day_Text_Style}"/>
-                                <TextBlock Text="Thur"
-                                            Grid.Column="4"
-                                            Style="{StaticResource Day_Text_Style}"/>
-                                <TextBlock Text="Fri"
-                                            Grid.Column="5"
-                                            Style="{StaticResource Day_Text_Style}"/>
-                                <TextBlock Text="Sat"
-                                            Grid.Column="6"
-                                            Style="{StaticResource Day_Text_Style}"/>
+                        </Grid.ColumnDefinitions>
 
-                            </Grid>
-
-
-
-                        </Border>
-
-
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
 
                     </Grid>
-                    
-                    <!--DayOfDay-->
-                    <Grid Grid.Row="1">
-                        <Border Margin="10,0,10,10"
-                                Background="Transparent"
-                                BorderThickness="1"
-                                BorderBrush="{x:Null}"
-                                CornerRadius="1,1,10,10">
-                            
-                            
-                            
-                            
-                            
-                        </Border>
                         
                         
-                        
-                        
-                        
-                        
-                    </Grid>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                 </Grid>
-               
+                     
 
 
 
+
+
+                </Grid>
             </Grid>
-            
+
+
         </Grid>
 
     </Grid>
