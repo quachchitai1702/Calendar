@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Calendar.View
 {
     /// <summary>
-    /// Interaction logic for My_task.xaml
+    /// Interaction logic for MyTask.xaml
     /// </summary>
-    public partial class My_task : UserControl
+    public partial class MyTask : UserControl
     {
-        public My_task()
+        public MyTask()
         {
             InitializeComponent();
         }

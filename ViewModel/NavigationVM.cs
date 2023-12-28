@@ -28,13 +28,14 @@ namespace Calendar.ViewModel
 
 
         public NavigationVM()
-        {
-            //Startup Page
-            CurrentView = new HomeVM();
+        {            
 
             HomeCommand = new RelayCommand(Home);
             CalendarCommand = new RelayCommand(Calendar);
             MyTaskCommand = new RelayCommand(MyTask);
+
+            //Startup Page
+            CurrentView = new HomeVM();
         }
     }
 }

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Calendar.Model
 {
-    class PageModel
+    public class PageModel
     {
-        public static int DayOfWeek = 7;
-        public static int DayOfColumn = 6;
+       
+
 
 
     }
+
 }
