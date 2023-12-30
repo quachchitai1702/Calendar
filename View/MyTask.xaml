@@ -79,6 +79,8 @@
                                     Background="{x:Null}" 
                                     BorderBrush="{x:Null}"
                                     SelectedDateFormat="Short" FirstDayOfWeek="Monday"
+                                    SelectedDateChanged="DatePicker_SelectedDateChanged"
+                                    x:Name="datePicker"
                                     />
 
                         <!--RightAngler-->

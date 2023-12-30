@@ -12,7 +12,11 @@
         Width="1240"
         WindowStartupLocation="CenterScreen" 
         Icon="/CalendarApp.ico" 
+        
+        Closing="Window_Closing"
         >
+    
+
 
     <Window.DataContext>
         <vm:NavigationVM/>
