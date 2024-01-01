@@ -15,14 +15,14 @@
         
         Closing="Window_Closing"
         >
-    
+
 
 
     <Window.DataContext>
         <vm:NavigationVM/>
     </Window.DataContext>
 
-  
+
 
     <Grid>
         <Grid>
@@ -36,12 +36,12 @@
             <Grid Grid.Column="0">
                 <Border Background="#FFF"/>
                 <DockPanel>
-                    
+
                     <!--// Image //-->
                     <StackPanel DockPanel.Dock="Top">
                         <Image Source="/Images/Image1.jpg"/>
                     </StackPanel>
-                    
+
                     <!--// Navigation //-->
 
                     <StackPanel DockPanel.Dock="Top">
@@ -93,20 +93,20 @@
                         </Menu:Btn>
                         <Separator Background="#749BC2"></Separator>
 
-                    </StackPanel>                
+                    </StackPanel>
 
 
                     <!--// Notify //-->
                     <StackPanel DockPanel.Dock="Top">
                         <CheckBox Content="Notify"
                                   Style="{StaticResource Notify_Check_Box}"/>
-                       
+
                         <DockPanel>
                             <!--// Timeset //-->
                             <TextBlock Text="Time:"
                                        Style="{StaticResource Notify_Text_Style}"
                                         DockPanel.Dock="Left"/>
-                            
+
                             <!--// Minute //-->
                             <Border Width="60" 
                                     Height="25"
@@ -115,7 +115,7 @@
                                     BorderThickness="0,0,0,0.5"
                                     BorderBrush="#000"
                                     >
-                                
+
                                 <TextBox Style="{StaticResource IntTextBoxStyle}"/>
 
                             </Border>
@@ -137,7 +137,7 @@
                     </StackPanel>
 
                     <Separator Background="#749BC2"></Separator>
-                    
+
                     <!--// Add //-->
                     <Button Style="{StaticResource Add_BtnStyle}"
                             VerticalAlignment="Bottom" 
