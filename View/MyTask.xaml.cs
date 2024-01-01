@@ -23,6 +23,17 @@ namespace Calendar.View
         public MyTask()
         {
             InitializeComponent();
+            SetDefaultDay();
+        }
+        void SetDefaultDay()
+        {
+            DateTimeOffset utcNow = DateTimeOffset.UtcNow;
+            DateTimeOffset localTime = TimeZoneInfo.ConvertTime(utcNow, TimeZoneInfo.Local);
+            datePicker.SelectedDate = localTime.DateTime;
+        }
+        private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }
