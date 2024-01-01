@@ -33,7 +33,7 @@ namespace Calendar.View
         }
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+
         }
     }
 }
